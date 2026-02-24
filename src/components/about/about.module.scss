@@ -25,3 +25,112 @@
         align-self: center;
     }
 }
+/* ── System flow line ── */
+.flowLine {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: var(--static-space-12);
+    margin-bottom: var(--static-space-4);
+    opacity: 0.45;
+}
+
+.flowNode {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid var(--neutral-border-medium);
+    flex-shrink: 0;
+}
+
+.flowConnector {
+    flex: 1;
+    height: 1px;
+    background: var(--neutral-border-medium);
+    min-width: 16px;
+    max-width: 32px;
+}
+
+.flowLabel {
+    font-size: var(--font-size-label-default-xs);
+    color: var(--neutral-on-background-weak);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    padding: 0 var(--static-space-4);
+}
+
+/* ── Structured intro paragraph ── */
+.introBlock {
+    display: flex;
+    flex-direction: column;
+    gap: var(--static-space-12);
+}
+
+.introLine {
+    display: block;
+    line-height: 1.65;
+}
+
+/* ── Work experience timeline ── */
+.workTimeline {
+    position: relative;
+    padding-left: var(--static-space-20);
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background: var(--neutral-border-medium);
+        opacity: 0.35;
+    }
+}
+
+/* ── Section divider above Background ── */
+.sectionDivider {
+    width: 100%;
+    height: 1px;
+    background: var(--neutral-border-medium);
+    opacity: 0.3;
+    margin-bottom: var(--static-space-32);
+}
+
+/* ── Core Competency cards ── */
+.competencyGrid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--static-space-16);
+}
+
+.competencyCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--static-space-8);
+    padding: var(--static-space-20);
+    border: 1px solid var(--neutral-border-medium);
+    border-radius: var(--radius-m);
+    background: var(--neutral-background-weak);
+    opacity: 0.95;
+    transition: var(--transition-micro-medium);
+
+    &:hover {
+        border-color: var(--neutral-border-strong);
+        opacity: 1;
+    }
+}
+
+.competencyCardHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--static-space-10);
+}
+
+.competencyIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral-on-background-weak);
+    flex-shrink: 0;
+}
