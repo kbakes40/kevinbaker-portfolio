@@ -1,7 +1,99 @@
-@media (--s) {
-    .mobile {
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-    }
+.footer {
+  background: #0a0c0f;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 64px 24px 0;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand1 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin: 0 0 4px;
+}
+
+.brand2 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3b82f6;
+  margin: 0 0 8px;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0 0 4px;
+  font-style: italic;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: #475569;
+  margin: 0;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contactLink {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contactLink:hover {
+  color: #3b82f6;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 20px 0;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.bottom p {
+  font-size: 0.75rem;
+  color: #334155;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
