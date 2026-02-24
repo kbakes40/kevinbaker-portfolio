@@ -43,8 +43,7 @@ const home = {
   headline: <>Building the infrastructure that scales internet sales</>,
   subline: (
     <>
-      I&apos;m Kevin, founder of <strong>WiFi Kings</strong> and{" "}
-      <strong>DaVinci Dynamics LLC</strong> — where I build dealer systems for fiber and wireless
+      I&apos;m Kevin, founder of WiFi Kings and DaVinci Dynamics LLC where I build dealer systems for fiber and wireless
       operators who are serious about growth.
     </>
   ),
