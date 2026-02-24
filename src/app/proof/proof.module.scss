@@ -1,0 +1,162 @@
+/* proof.module.scss
+   Subtle engineered visual refinements.
+   Uses Once UI token CSS variables only. No Tailwind. No new palette.
+*/
+
+/* Faint grid background — only on this container */
+.proofContainer {
+  width: 100%;
+  padding: 0 var(--static-space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--static-space-40);
+  background-image: repeating-linear-gradient(
+      0deg,
+      var(--neutral-alpha-weak) 0px,
+      var(--neutral-alpha-weak) 1px,
+      transparent 1px,
+      transparent 100px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--neutral-alpha-weak) 0px,
+      var(--neutral-alpha-weak) 1px,
+      transparent 1px,
+      transparent 100px
+    );
+  background-size: 100px 100px;
+}
+
+/* Section divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--neutral-alpha-weak);
+  opacity: 0.5;
+}
+
+/* ── Highlights ── */
+.highlightList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--static-space-16);
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--static-space-12);
+}
+
+.highlightIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-on-background-medium);
+  opacity: 0.65;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Timeline strip ── */
+.timeline {
+  display: flex;
+  align-items: center;
+  margin-top: var(--static-space-24);
+  opacity: 0.4;
+  flex-wrap: wrap;
+  row-gap: var(--static-space-8);
+}
+
+.timelineStep {
+  display: flex;
+  align-items: center;
+}
+
+.timelineConnector {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--neutral-alpha-medium);
+  flex-shrink: 0;
+}
+
+.timelineNodeWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.timelineLabel {
+  font-family: var(--font-family-label);
+  font-size: 0.625rem;
+  letter-spacing: 0.07em;
+  color: var(--neutral-on-background-weak);
+  white-space: nowrap;
+}
+
+.timelineNode {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-alpha-strong);
+  background: transparent;
+}
+
+/* ── Cards grid ── */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--static-space-16);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--static-space-8);
+  padding: var(--static-space-20);
+  border: 1px solid var(--neutral-alpha-medium);
+  border-radius: var(--radius-m);
+  background: var(--neutral-background-weak);
+}
+
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-on-background-medium);
+  opacity: 0.65;
+  margin-bottom: var(--static-space-4);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timelineConnector {
+    display: none;
+  }
+
+  .timelineStep {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--static-space-8);
+  }
+
+  .timelineNodeWrap {
+    flex-direction: row;
+    gap: var(--static-space-8);
+  }
+}

@@ -1,0 +1,119 @@
+/* services.module.scss
+   Subtle engineered visual refinements.
+   Uses Once UI token CSS variables only. No Tailwind. No new palette.
+*/
+
+/* Faint grid background — only on this container */
+.servicesContainer {
+  width: 100%;
+  padding: 0 var(--static-space-24);
+  background-image: repeating-linear-gradient(
+      0deg,
+      var(--neutral-alpha-weak) 0px,
+      var(--neutral-alpha-weak) 1px,
+      transparent 1px,
+      transparent 100px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--neutral-alpha-weak) 0px,
+      var(--neutral-alpha-weak) 1px,
+      transparent 1px,
+      transparent 100px
+    );
+  background-size: 100px 100px;
+  opacity: 1;
+}
+
+/* Section divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--neutral-alpha-weak);
+  opacity: 0.5;
+  margin: var(--static-space-40) 0;
+}
+
+/* Service block */
+.serviceBlock {
+  padding: var(--static-space-32) 0 var(--static-space-40);
+  display: flex;
+  flex-direction: column;
+  gap: var(--static-space-20);
+}
+
+/* Icon + title row */
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--static-space-12);
+}
+
+.serviceIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-on-background-medium);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+/* Micro flow line */
+.flowLine {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  opacity: 0.45;
+  row-gap: var(--static-space-8);
+}
+
+.flowStep {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.flowNode {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-alpha-strong);
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.flowLabel {
+  font-family: var(--font-family-label);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--neutral-on-background-weak);
+  padding: 0 var(--static-space-8);
+  white-space: nowrap;
+}
+
+.flowConnector {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--neutral-alpha-medium);
+  flex-shrink: 0;
+}
+
+/* Responsive: stack flow vertically on small screens */
+@media (max-width: 480px) {
+  .flowLine {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .flowConnector {
+    display: none;
+  }
+
+  .flowStep {
+    flex-direction: row;
+    align-items: center;
+  }
+}
