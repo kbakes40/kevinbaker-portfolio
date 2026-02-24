@@ -6,7 +6,7 @@ const person = {
   },
   role: "Revenue Systems Operator",
   avatar: "/images/avatar.jpg",
-  location: "America/Chicago",
+  location: "America/Detroit",
   languages: ["English"],
 };
 
@@ -138,7 +138,7 @@ const about = {
         name: "Telecom Sales and Dealer Operations",
         description: (
           <>
-            10 plus years in internet and wireless sales, from door-to-door fiber rep to building
+            15 plus years in internet and wireless sales, from door-to-door fiber rep to building
             multi-market dealer infrastructure and acquisition funnels.
           </>
         ),

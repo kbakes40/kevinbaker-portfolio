@@ -73,7 +73,7 @@ const IconGear = () => (
 
 const highlights = [
   {
-    text: "Telecom sales and dealer network background spanning 10 plus years",
+    text: "Telecom sales and dealer network background spanning 15 plus years",
     icon: <IconNetwork />,
   },
   {
