@@ -10,6 +10,11 @@ import { routes, display } from "@/app/resources";
 import { person, about, blog, work, gallery } from "@/app/resources/content";
 import { ThemeToggle } from "./ThemeToggle";
 
+const services = { label: "Services" };
+const stacks = { label: "Stacks" };
+const proof = { label: "Proof" };
+const contact = { label: "Contact" };
+
 type TimeDisplayProps = {
   timeZone: string;
   locale?: string; // Optionally allow locale, defaulting to 'en-GB'
@@ -144,6 +149,74 @@ export const Header = () => {
                     prefixIcon="gallery"
                     href="/gallery"
                     selected={pathname.startsWith("/gallery")}
+                  />
+                </>
+              )}
+              {routes["/services"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="arrowUpRight"
+                    href="/services"
+                    label={services.label}
+                    selected={pathname.startsWith("/services")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="arrowUpRight"
+                    href="/services"
+                    selected={pathname.startsWith("/services")}
+                  />
+                </>
+              )}
+              {routes["/stacks"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="document"
+                    href="/stacks"
+                    label={stacks.label}
+                    selected={pathname.startsWith("/stacks")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="document"
+                    href="/stacks"
+                    selected={pathname.startsWith("/stacks")}
+                  />
+                </>
+              )}
+              {routes["/proof"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="check"
+                    href="/proof"
+                    label={proof.label}
+                    selected={pathname.startsWith("/proof")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="check"
+                    href="/proof"
+                    selected={pathname.startsWith("/proof")}
+                  />
+                </>
+              )}
+              {routes["/contact"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="email"
+                    href="/contact"
+                    label={contact.label}
+                    selected={pathname.startsWith("/contact")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="email"
+                    href="/contact"
+                    selected={pathname.startsWith("/contact")}
                   />
                 </>
               )}
