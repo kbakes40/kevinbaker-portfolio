@@ -27,6 +27,9 @@ interface CaseStudyLayoutProps {
   ctaSecondaryHref?: string;
   liveSiteUrl?: string;
   liveSiteLabel?: string;
+  extraSectionTitle?: string;
+  extraSectionBody?: string;
+  extraSectionBullets?: string[];
 }
 
 export default function CaseStudyLayout({
@@ -46,6 +49,9 @@ export default function CaseStudyLayout({
   ctaSecondaryHref,
   liveSiteUrl,
   liveSiteLabel = "Live Site",
+  extraSectionTitle,
+  extraSectionBody,
+  extraSectionBullets,
 }: CaseStudyLayoutProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const mockupInnerRef = useRef<HTMLDivElement>(null);
@@ -188,6 +194,25 @@ export default function CaseStudyLayout({
           ))}
         </div>
       </section>
+
+      {/* ── Extra Section ── */}
+      {extraSectionTitle && (
+        <section className={styles.section} data-reveal>
+          <h2 className={styles.sectionHeading}>{extraSectionTitle}</h2>
+          {extraSectionBody && (
+            <p className={styles.bodyText}>{extraSectionBody}</p>
+          )}
+          {extraSectionBullets && extraSectionBullets.length > 0 && (
+            <ul className={styles.bulletList} data-reveal>
+              {extraSectionBullets.map((b, i) => (
+                <li key={i} className={styles.bulletItem}>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
 
       {/* ── CTA ── */}
       <section className={styles.ctaSection} data-reveal>
