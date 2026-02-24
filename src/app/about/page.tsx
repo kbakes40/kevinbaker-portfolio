@@ -355,9 +355,6 @@ export default function About() {
                 {about.technical.skills.map((skill, index) => (
                   <div key={`${skill.title}-${index}`} className={styles.competencyCard}>
                     <div className={styles.competencyCardHeader}>
-                      <span className={styles.competencyIcon}>
-                        {competencyIcons[skill.title] ?? null}
-                      </span>
                       <Text variant="heading-strong-l">{skill.title}</Text>
                     </div>
                     <Text variant="body-default-m" onBackground="neutral-weak">
