@@ -93,25 +93,43 @@ export default function Home() {
       ══════════════════════════════════════════════════════════════ */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <div className={styles.heroBadge}>WiFi Kings · DaVinci Dynamics LLC</div>
-          <h1 className={styles.heroHeadline}>
-            Scale Your Internet &amp; Wireless<br />
-            <span className={styles.accentBlue}>Sales Operation</span>
-          </h1>
-          <p className={styles.heroSub}>
-            Dealer infrastructure. Fiber funnels. Commission clarity. Built for growth.
-          </p>
-          <div className={styles.heroCtas}>
-            <a href="#apply" className={styles.btnPrimary}>
-              Become a Partner
-            </a>
-            <a href="#model" className={styles.btnSecondary}>
-              See Dealer Model
-            </a>
+          <div className={styles.heroLayout}>
+            <div className={styles.heroContent}>
+              <div className={styles.heroBadge}>WiFi Kings · DaVinci Dynamics LLC</div>
+              <h1 className={styles.heroHeadline}>
+                Scale Your Internet &amp; Wireless<br />
+                <span className={styles.accentBlue}>Sales Operation</span>
+              </h1>
+              <p className={styles.heroSub}>
+                Dealer infrastructure. Fiber funnels. Commission clarity. Built for growth.
+              </p>
+              <div className={styles.heroCtas}>
+                <a href="#apply" className={styles.btnPrimary}>
+                  Become a Partner
+                </a>
+                <a href="#model" className={styles.btnSecondary}>
+                  See Dealer Model
+                </a>
+              </div>
+              <p className={styles.heroTrust}>
+                Built for serious operators in fiber and wireless.
+              </p>
+            </div>
+            <div className={styles.heroPhotoWrap}>
+              <div className={styles.heroPhotoRing}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/avatar.jpg"
+                  alt="Kevin Baker – Founder of WiFi Kings and DaVinci Dynamics LLC"
+                  className={styles.heroPhoto}
+                />
+              </div>
+              <div className={styles.heroPhotoLabel}>
+                <span className={styles.heroPhotoName}>Kevin Baker</span>
+                <span className={styles.heroPhotoRole}>Founder · WiFi Kings &amp; DaVinci Dynamics LLC</span>
+              </div>
+            </div>
           </div>
-          <p className={styles.heroTrust}>
-            Built for serious operators in fiber and wireless.
-          </p>
         </div>
       </section>
 
