@@ -1,21 +1,19 @@
-// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL = "https://magic-portfolio-7mk8.vercel.app";
+const baseURL = "https://magic-portfolio-olive-rho.vercel.app";
 
 const routes = {
   "/": true,
-  "/about": false,
-  "/work": false,
-  "/blog": false,
+  "/about": true,
+  "/work": true,
+  "/blog": true,
   "/gallery": false,
 };
 
-// Enable password protection on selected routes
 const protectedRoutes = {};
 
-import { Inter } from "next/font/google";
+import { Geist } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 
-const primaryFont = Inter({
+const primaryFont = Geist({
   variable: "--font-primary",
   subsets: ["latin"],
   display: "swap",
@@ -37,12 +35,12 @@ const font = {
 const style = {
   theme: "dark",
   neutral: "gray",
-  brand: "blue",
-  accent: "green",
-  solid: "color",
+  brand: "cyan",
+  accent: "cyan",
+  solid: "contrast",
   solidStyle: "flat",
-  border: "conservative",
-  surface: "filled",
+  border: "playful",
+  surface: "translucent",
   transition: "all",
   scaling: "100",
 };
@@ -56,18 +54,18 @@ const effects = {
   },
   gradient: {
     display: true,
-    opacity: 30,
+    opacity: 60,
     x: 50,
     y: 0,
     width: 80,
-    height: 40,
+    height: 50,
     tilt: 0,
     colorStart: "brand-background-strong",
     colorEnd: "page-background",
   },
   dots: {
     display: true,
-    opacity: 20,
+    opacity: 40,
     size: "2",
     color: "brand-background-strong",
   },
@@ -89,22 +87,22 @@ const effects = {
 };
 
 const display = {
-  location: false,
-  time: false,
-  themeSwitcher: false,
+  location: true,
+  time: true,
+  themeSwitcher: true,
 };
 
 const mailchimp = {
   action: "https://url/subscribe/post?parameters",
   effects: {
     mask: {
-      cursor: false,
+      cursor: true,
       x: 50,
       y: 0,
       radius: 100,
     },
     gradient: {
-      display: false,
+      display: true,
       opacity: 90,
       x: 50,
       y: 0,
@@ -115,7 +113,7 @@ const mailchimp = {
       colorEnd: "static-transparent",
     },
     dots: {
-      display: false,
+      display: true,
       opacity: 20,
       size: "2",
       color: "brand-on-background-weak",

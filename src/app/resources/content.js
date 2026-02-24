@@ -4,105 +4,174 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Telecom Dealer Infrastructure Builder",
+  role: "Telecom Dealer & Founder",
   avatar: "/images/avatar.jpg",
-  email: "partnerships@davincidynamics.ai",
-  location: "America/Detroit",
-  languages: [],
-};
-
-const newsletter = {
-  display: false,
-  title: <>Partner Newsletter</>,
-  description: <>Updates from the WiFi Kings dealer network.</>,
+  location: "America/Chicago",
+  languages: ["English"],
 };
 
 const social = [
   {
+    name: "LinkedIn",
+    icon: "linkedin",
+    link: "https://www.linkedin.com/in/kevin-baker",
+  },
+  {
     name: "Email",
     icon: "email",
-    link: `mailto:partnerships@davincidynamics.ai`,
+    link: "mailto:kevin@davincidreams.ai",
   },
 ];
 
-const home = {
-  path: "/",
-  image: "/images/og/home.jpg",
-  label: "Home",
-  title: "WiFi Kings Dealer Partner Program | Kevin Baker",
-  description:
-    "Scale your internet and wireless sales operation. Dealer infrastructure, fiber funnels, and commission clarity built for growth. Apply to partner with WiFi Kings.",
-  headline: <>Scale Your Internet &amp; Wireless Sales Operation</>,
-  featured: {
-    display: false,
-    title: <>WiFi Kings Dealer Program</>,
-    href: "/",
-  },
-  subline: (
+const newsletter = {
+  display: false,
+  title: <>Join the WiFi Kings Network</>,
+  description: (
     <>
-      Dealer infrastructure. Fiber funnels. Commission clarity. Built for growth.
+      Get updates on dealer opportunities, commission structures, and fiber market expansion from
+      Kevin Baker and the WiFi Kings team.
     </>
   ),
+};
+
+const home = {
+  path: "/",
+  image: "/images/avatar.jpg",
+  label: "Home",
+  title: `WiFi Kings Dealer Partner Program | Kevin Baker`,
+  description: `Kevin Baker — Founder of WiFi Kings and DaVinci Dynamics LLC. Telecom dealer infrastructure, fiber funnels, and commission clarity for serious operators.`,
+  headline: <>Building the infrastructure that scales internet sales</>,
+  subline: (
+    <>
+      I&apos;m Kevin, founder of <strong>WiFi Kings</strong> and{" "}
+      <strong>DaVinci Dynamics LLC</strong> — where I build dealer systems for fiber and wireless
+      operators who are serious about growth.
+    </>
+  ),
+  featured: {
+    href: "/work",
+    title: "WiFi Kings Dealer System",
+  },
 };
 
 const about = {
   path: "/about",
   label: "About",
-  title: "About Kevin Baker",
-  description:
-    "Kevin Baker — Founder of WiFi Kings and DaVinci Dynamics LLC. Building scalable internet and wireless sales infrastructure for dealers.",
+  title: `About – Kevin Baker`,
+  description: `Kevin Baker is the founder of WiFi Kings and DaVinci Dynamics LLC — a telecom dealer infrastructure and fiber sales automation company.`,
   tableOfContent: {
-    display: false,
+    display: true,
     subItems: false,
   },
   avatar: {
-    display: false,
+    display: true,
   },
   calendar: {
-    display: false,
-    link: "https://cal.com",
+    display: true,
+    link: "https://cal.com/kevinbaker",
   },
   intro: {
     display: true,
-    title: "About Kevin Baker",
+    title: "Introduction",
     description: (
       <>
-        Kevin Baker is the founder of WiFi Kings and DaVinci Dynamics LLC, based in Michigan. He
-        builds scalable internet and wireless sales infrastructure for dealers who want higher
-        installs, cleaner payouts, and real backend systems.
+        Kevin Baker is a telecom dealer and entrepreneur based in the United States. As the founder
+        of <strong>WiFi Kings</strong> and <strong>DaVinci Dynamics LLC</strong>, he builds
+        end-to-end dealer infrastructure for fiber and wireless internet sales — including address
+        availability funnels, automated order routing, commission tracking, and CRM integrations.
+        Kevin works with independent dealers, sub-agents, and wireless store owners who want to
+        scale their install volume and revenue without the operational chaos.
       </>
     ),
   },
   work: {
-    display: false,
+    display: true,
     title: "Work Experience",
     experiences: [
       {
         company: "WiFi Kings",
-        timeframe: "2020 - Present",
+        timeframe: "2021 – Present",
+        role: "Founder & CEO",
+        achievements: [
+          <>
+            Built a full-stack dealer acquisition and management platform for fiber and wireless
+            internet sales, processing hundreds of orders monthly.
+          </>,
+          <>
+            Developed automated address-based availability funnels that qualify leads and route
+            orders to the correct carrier in real time.
+          </>,
+          <>
+            Structured commission tracking models with KPI dashboards, reducing payout disputes and
+            increasing dealer retention.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "DaVinci Dynamics LLC",
+        timeframe: "2020 – Present",
         role: "Founder",
-        achievements: [],
+        achievements: [
+          <>
+            Built AI-assisted sales automation tools for telecom dealers, including CRM integrations
+            with Authorize.net payment processing and ID verification workflows.
+          </>,
+          <>
+            Launched dealer partner programs connecting sub-agents and independent reps with fiber
+            carriers across multiple markets.
+          </>,
+        ],
         images: [],
       },
     ],
   },
   studies: {
-    display: false,
-    title: "Studies",
+    display: true,
+    title: "Background",
     institutions: [
       {
-        name: "DaVinci Dynamics LLC",
-        description: <>Telecom dealer infrastructure.</>,
+        name: "Telecom Sales & Dealer Operations",
+        description: (
+          <>
+            10+ years in internet and wireless sales, from door-to-door fiber rep to building
+            multi-market dealer infrastructure.
+          </>
+        ),
+      },
+      {
+        name: "Business Automation & AI",
+        description: (
+          <>
+            Applied AI and automation to telecom sales workflows — CRM pipelines, lead scoring,
+            order routing, and commission modeling.
+          </>
+        ),
       },
     ],
   },
   technical: {
-    display: false,
-    title: "Technical skills",
+    display: true,
+    title: "Core Competencies",
     skills: [
       {
         title: "Dealer Infrastructure",
-        description: <>End-to-end internet sales systems.</>,
+        description: (
+          <>
+            Address-based availability funnels, automated order routing, carrier integrations, and
+            commission tracking systems built for scale.
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "Sales Automation",
+        description: (
+          <>
+            CRM integrations, lead qualification automation, follow-up sequences, and reporting
+            dashboards for fiber and wireless dealer operations.
+          </>
+        ),
         images: [],
       },
     ],
@@ -112,22 +181,22 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Dealer Insights",
-  description: "Telecom dealer growth strategies from WiFi Kings.",
+  title: `Telecom Dealer Insights – Kevin Baker`,
+  description: `Practical guides on fiber sales, dealer infrastructure, commission structures, and scaling internet sales operations.`,
 };
 
 const work = {
   path: "/work",
   label: "Work",
-  title: "Projects",
-  description: "Dealer infrastructure projects by Kevin Baker",
+  title: `Projects – Kevin Baker`,
+  description: `Dealer systems, fiber funnels, and automation projects by Kevin Baker / WiFi Kings / DaVinci Dynamics LLC`,
 };
 
 const gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: "Gallery",
-  description: "WiFi Kings gallery",
+  title: `Gallery – Kevin Baker`,
+  description: `A photo collection by Kevin Baker`,
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",

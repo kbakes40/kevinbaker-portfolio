@@ -1,13 +1,10 @@
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
-import "./globals.css";
-
 import classNames from "classnames";
-
 import { Footer, Header, RouteGuard } from "@/components";
-import { baseURL, style, font, home } from "@/app/resources";
-
-import { Flex, ThemeProvider, ToastProvider } from "@/once-ui/components";
+import { baseURL, effects, style, font, home } from "@/app/resources";
+import { Background, Column, Flex, ThemeProvider, ToastProvider } from "@/once-ui/components";
+import { opacity, SpacingToken } from "@/once-ui/types";
 import { Meta } from "@/once-ui/modules";
 
 export async function generateMetadata() {
@@ -52,8 +49,17 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             __html: `
               (function() {
                 try {
+                  const theme = localStorage.getItem('theme') || 'system';
+                  const root = document.documentElement;
+                  if (theme === 'system') {
+                    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+                  } else {
+                    root.setAttribute('data-theme', theme);
+                  }
+                } catch (e) {
                   document.documentElement.setAttribute('data-theme', 'dark');
-                } catch (e) {}
+                }
               })();
             `,
           }}
@@ -61,13 +67,64 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       </head>
       <ThemeProvider>
         <ToastProvider>
-          <body style={{ minHeight: "100vh", margin: 0, padding: 0, background: "#0d0f12" }}>
+          <Column style={{ minHeight: "100vh" }} as="body" fillWidth margin="0" padding="0">
+            <Background
+              position="fixed"
+              mask={{
+                x: effects.mask.x,
+                y: effects.mask.y,
+                radius: effects.mask.radius,
+                cursor: effects.mask.cursor,
+              }}
+              gradient={{
+                display: effects.gradient.display,
+                opacity: effects.gradient.opacity as opacity,
+                x: effects.gradient.x,
+                y: effects.gradient.y,
+                width: effects.gradient.width,
+                height: effects.gradient.height,
+                tilt: effects.gradient.tilt,
+                colorStart: effects.gradient.colorStart,
+                colorEnd: effects.gradient.colorEnd,
+              }}
+              dots={{
+                display: effects.dots.display,
+                opacity: effects.dots.opacity as opacity,
+                size: effects.dots.size as SpacingToken,
+                color: effects.dots.color,
+              }}
+              grid={{
+                display: effects.grid.display,
+                opacity: effects.grid.opacity as opacity,
+                color: effects.grid.color,
+                width: effects.grid.width,
+                height: effects.grid.height,
+              }}
+              lines={{
+                display: effects.lines.display,
+                opacity: effects.lines.opacity as opacity,
+                size: effects.lines.size as SpacingToken,
+                thickness: effects.lines.thickness,
+                angle: effects.lines.angle,
+                color: effects.lines.color,
+              }}
+            />
+            <Flex fillWidth minHeight="16" hide="s"></Flex>
             <Header />
-            <main style={{ paddingTop: "64px" }}>
-              <RouteGuard>{children}</RouteGuard>
-            </main>
+            <Flex
+              zIndex={0}
+              fillWidth
+              paddingY="l"
+              paddingX="l"
+              horizontal="center"
+              flex={1}
+            >
+              <Flex horizontal="center" fillWidth minHeight="0">
+                <RouteGuard>{children}</RouteGuard>
+              </Flex>
+            </Flex>
             <Footer />
-          </body>
+          </Column>
         </ToastProvider>
       </ThemeProvider>
     </Flex>
