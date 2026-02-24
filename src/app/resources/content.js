@@ -14,7 +14,7 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/kevin-baker",
+    link: "https://www.linkedin.com/in/kevin-j-baker",
   },
   {
     name: "Email",
