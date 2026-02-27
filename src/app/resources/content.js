@@ -21,6 +21,11 @@ const social = [
     icon: "email",
     link: "mailto:info@davincidynamics.ai",
   },
+  {
+    name: "Phone",
+    icon: "phone",
+    link: "tel:+17343086789",
+  },
 ];
 
 const newsletter = {
