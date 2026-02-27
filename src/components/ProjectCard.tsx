@@ -1,5 +1,4 @@
 "use client";
-
 import {
   AvatarGroup,
   Carousel,
@@ -9,6 +8,7 @@ import {
   SmartLink,
   Text,
 } from "@/once-ui/components";
+import styles from "./ProjectCard.module.scss";
 
 interface ProjectCardProps {
   href: string;
@@ -30,15 +30,31 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   avatars,
   link,
 }) => {
+  const firstMedia = images[0] ?? "";
+  const isVideo = /\.(mp4|webm|mov)$/i.test(firstMedia);
+
   return (
     <Column fillWidth gap="m">
-      <Carousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        images={images.map((image) => ({
-          src: image,
-          alt: title,
-        }))}
-      />
+      {isVideo ? (
+        <div className={styles.videoWrapper}>
+          <video
+            src={firstMedia}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={styles.videoCover}
+          />
+        </div>
+      ) : (
+        <Carousel
+          sizes="(max-width: 960px) 100vw, 960px"
+          images={images.map((image) => ({
+            src: image,
+            alt: title,
+          }))}
+        />
+      )}
       <Flex
         mobileDirection="column"
         fillWidth
