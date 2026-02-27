@@ -75,7 +75,7 @@ export const iconLibrary: Record<string, IconType> = {
   moon: HiMoon,
   sun: HiSun,
   document: HiOutlineDocument,
-  phone: HiOutlinePhone,
+  phone: HiPhone,
 };
 
 export type IconLibrary = typeof iconLibrary;
