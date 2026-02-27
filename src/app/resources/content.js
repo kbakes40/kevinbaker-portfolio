@@ -29,7 +29,7 @@ const newsletter = {
   description: (
     <>
       Get updates on telecom dealer infrastructure, ecommerce conversion systems, and automation
-      builds from Kevin Baker and DaVinci Dynamics LLC.
+      builds from Kevin Baker and DaVinci Dynamics.
     </>
   ),
 };
@@ -38,7 +38,7 @@ const home = {
   path: "/",
   image: "/images/avatar.jpg",
   label: "Home",
-  title: `Kevin Baker | DaVinci Dynamics LLC | Revenue Systems Portfolio`,
+  title: `Kevin Baker | DaVinci Dynamics | Revenue Systems Portfolio`,
   description: `Telecom dealer acquisition funnels, Shopify ecommerce conversion systems, and automation infrastructure built to scale.`,
   headline: <>I build revenue systems, not websites.</>,
   subline: (
@@ -57,7 +57,7 @@ const about = {
   path: "/about",
   label: "About",
   title: `About – Kevin Baker`,
-  description: `Kevin Baker is the founder of DaVinci Dynamics LLC, a revenue systems and automation firm focused on telecom growth, ecommerce conversion, and operational scale.`,
+  description: `Kevin Baker is the founder of DaVinci Dynamics, a revenue systems and automation firm focused on telecom growth, ecommerce conversion, and operational scale.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -90,7 +90,7 @@ const about = {
     experiences: [
       {
         company: "DaVinci Dynamics",
-        timeframe: "2020 – Present",
+        timeframe: "2024 – Present",
         role: "Founder",
         achievements: [
           <>
