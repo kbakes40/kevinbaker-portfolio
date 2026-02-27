@@ -11,7 +11,7 @@ const inquiryTypes = [
   },
   {
     label: "Active Project",
-    email: "projects@davincidynamics.ai",
+    email: "project@davincidynamics.ai",
     description: "Active client builds and milestone communication.",
   },
   {

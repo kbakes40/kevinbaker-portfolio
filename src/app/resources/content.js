@@ -19,7 +19,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:project@davincidynamics.ai",
+    link: "mailto:info@davincidynamics.ai",
   },
   {
     name: "Phone",
