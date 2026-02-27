@@ -26,7 +26,7 @@ const inquiryTypes = [
   },
   {
     label: "Partnerships",
-    email: "info@davincidynamics.ai",
+    email: "project@davincidynamics.ai",
     description: "Strategic growth conversations.",
   },
 ];
