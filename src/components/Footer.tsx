@@ -28,7 +28,7 @@ export const Footer = () => {
         </Text>
 
         {/* Phone number */}
-        <Flex vertical="center" gap="6">
+        <Flex vertical="center" gap="8">
           <svg
             width="14"
             height="14"
