@@ -37,14 +37,37 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const selected = inquiryTypes[selectedIndex];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailto = `mailto:${selected.email}?subject=${encodeURIComponent(selected.label + " from " + name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nInquiry Type: " + selected.label + "\n\n" + message)}`;
-    window.location.href = mailto;
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          inquiryType: selected.label,
+          toEmail: selected.email,
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to send message.");
+      }
+      setSubmitted(true);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -117,8 +140,13 @@ export default function Contact() {
             required
             lines={6}
           />
-          <Button type="submit" variant="primary" size="m" fillWidth>
-            Send Message
+          {error && (
+            <Text variant="body-default-s" style={{ color: "var(--danger-on-background-medium)" }}>
+              {error}
+            </Text>
+          )}
+          <Button type="submit" variant="primary" size="m" fillWidth disabled={loading}>
+            {loading ? "Sending..." : "Send Message"}
           </Button>
         </Column>
       )}
