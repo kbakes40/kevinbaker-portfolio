@@ -60,7 +60,7 @@ const effects = {
     display: true,
     opacity: 60,
     x: 50,
-    y: 50,
+    y: 0,
     width: 80,
     height: 50,
     tilt: 0,
