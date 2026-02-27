@@ -235,7 +235,7 @@ export default function About() {
             <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
               <div className={styles.introBlock}>
                 <span className={styles.introLine}>
-                  Kevin Baker is the founder of DaVinci Dynamics LLC, a revenue systems and automation firm
+                  Kevin Baker is the founder of DaVinci Dynamics, a revenue systems and automation firm
                   focused on telecom growth, ecommerce conversion, and operational scale.
                 </span>
                 <span className={styles.introLine}>

@@ -6,9 +6,9 @@ import styles from "./proof.module.scss";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "Proof – Kevin Baker | DaVinci Dynamics LLC",
+    title: "Proof – Kevin Baker | DaVinci Dynamics",
     description:
-      "Background, highlights, and what clients get when working with Kevin Baker and DaVinci Dynamics LLC.",
+      "Background, highlights, and what clients get when working with Kevin Baker and DaVinci Dynamics.",
     baseURL: baseURL,
     path: "/proof",
   });
@@ -122,8 +122,8 @@ export default function Proof() {
         as="webPage"
         baseURL={baseURL}
         path="/proof"
-        title="Proof – Kevin Baker | DaVinci Dynamics LLC"
-        description="Background, highlights, and what clients get when working with Kevin Baker and DaVinci Dynamics LLC."
+        title="Proof – Kevin Baker | DaVinci Dynamics"
+        description="Background, highlights, and what clients get when working with Kevin Baker and DaVinci Dynamics."
         image={`${baseURL}/og?title=${encodeURIComponent("Proof")}`}
         author={{
           name: person.name,
@@ -134,7 +134,7 @@ export default function Proof() {
       <Column fillWidth paddingY="24" gap="m">
         <Heading variant="display-strong-l">Proof</Heading>
         <Text variant="heading-default-xl" onBackground="neutral-weak">
-          Background, track record, and what you get when you build with DaVinci Dynamics LLC.
+          Background, track record, and what you get when you build with DaVinci Dynamics.
         </Text>
       </Column>
 

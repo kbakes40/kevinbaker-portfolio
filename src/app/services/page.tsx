@@ -6,7 +6,7 @@ import styles from "./services.module.scss";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "Services – Kevin Baker | DaVinci Dynamics LLC",
+    title: "Services – Kevin Baker | DaVinci Dynamics",
     description:
       "Telecom dealer growth systems, Shopify revenue engineering, and automation infrastructure built to scale.",
     baseURL: baseURL,
@@ -93,7 +93,7 @@ export default function Services() {
         as="webPage"
         baseURL={baseURL}
         path="/services"
-        title="Services – Kevin Baker | DaVinci Dynamics LLC"
+        title="Services – Kevin Baker | DaVinci Dynamics"
         description="Telecom dealer growth systems, Shopify revenue engineering, and automation infrastructure built to scale."
         image={`${baseURL}/og?title=${encodeURIComponent("Services")}`}
         author={{

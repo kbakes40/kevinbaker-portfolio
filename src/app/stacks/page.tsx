@@ -5,7 +5,7 @@ import { Meta, Schema } from "@/once-ui/modules";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "Stacks – Kevin Baker | DaVinci Dynamics LLC",
+    title: "Stacks – Kevin Baker | DaVinci Dynamics",
     description:
       "Modern commerce, payments, automation, and infrastructure stack built for performance and scale.",
     baseURL: baseURL,
@@ -51,7 +51,7 @@ export default function Stacks() {
         as="webPage"
         baseURL={baseURL}
         path="/stacks"
-        title="Stacks – Kevin Baker | DaVinci Dynamics LLC"
+        title="Stacks – Kevin Baker | DaVinci Dynamics"
         description="Modern commerce, payments, automation, and infrastructure stack built for performance and scale."
         image={`${baseURL}/og?title=${encodeURIComponent("Stacks")}`}
         author={{
