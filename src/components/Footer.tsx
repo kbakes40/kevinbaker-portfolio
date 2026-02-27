@@ -51,8 +51,6 @@ export const Footer = () => {
               fontSize: "var(--font-size-body-default-s)",
               letterSpacing: "0.01em",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--neutral-on-background-strong)")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--neutral-on-background-weak)")}
           >
             1-734-308-6789
           </a>
