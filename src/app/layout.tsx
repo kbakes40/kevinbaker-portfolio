@@ -7,6 +7,16 @@ import { Background, Column, Flex, ThemeProvider, ToastProvider } from "@/once-u
 import { opacity, SpacingToken } from "@/once-ui/types";
 import { Meta } from "@/once-ui/modules";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0A0A0A" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  ],
+};
+
 export async function generateMetadata() {
   return Meta.generate({
     title: home.title,

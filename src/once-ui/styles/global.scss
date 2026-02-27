@@ -4,6 +4,17 @@
     scroll-behavior: smooth;
 }
 
+html {
+    background-color: var(--page-background);
+    /* Safari iOS: prevent white overscroll bar */
+    overscroll-behavior-y: none;
+}
+
+body {
+    background-color: var(--page-background);
+    overscroll-behavior-y: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: var(--static-space-80);
 }
