@@ -44,6 +44,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       )}
     >
       <head>
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A0A0A" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -51,11 +53,27 @@ export default async function RootLayout({ children }: RootLayoutProps) {
                 try {
                   const theme = localStorage.getItem('theme') || 'system';
                   const root = document.documentElement;
+                  const darkMeta = document.querySelector('meta[name="theme-color"][media*="dark"]');
+                  const lightMeta = document.querySelector('meta[name="theme-color"][media*="light"]');
+                  function setThemeColor(isDark) {
+                    if (darkMeta) darkMeta.content = isDark ? '#0A0A0A' : '#0A0A0A';
+                    if (lightMeta) lightMeta.content = isDark ? '#0A0A0A' : '#ffffff';
+                    // Also set a single theme-color for browsers that don't support media
+                    var single = document.querySelector('meta[name="theme-color"]:not([media])');
+                    if (!single) {
+                      single = document.createElement('meta');
+                      single.name = 'theme-color';
+                      document.head.appendChild(single);
+                    }
+                    single.content = isDark ? '#0A0A0A' : '#ffffff';
+                  }
                   if (theme === 'system') {
                     const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
                     root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+                    setThemeColor(isDark);
                   } else {
                     root.setAttribute('data-theme', theme);
+                    setThemeColor(theme === 'dark');
                   }
                 } catch (e) {
                   document.documentElement.setAttribute('data-theme', 'dark');
