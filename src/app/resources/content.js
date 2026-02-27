@@ -74,7 +74,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Kevin Baker is the founder of DaVinci Dynamics LLC, a revenue systems and automation firm
+        Kevin Baker is the founder of DaVinci Dynamics, a revenue systems and automation firm
         focused on telecom growth, ecommerce conversion, and operational scale. With deep telecom
         sales and dealer network experience, Kevin designs systems built for production, not
         presentation. Across projects like WiFi-Kings.com, DaVinciDynamics.ai, and BossHookah.site,
@@ -89,7 +89,7 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "DaVinci Dynamics LLC",
+        company: "DaVinci Dynamics",
         timeframe: "2020 – Present",
         role: "Founder",
         achievements: [
@@ -110,7 +110,7 @@ const about = {
       },
       {
         company: "WiFi Kings",
-        timeframe: "2021 – Present",
+        timeframe: "2021 – 2025",
         role: "Founder & CEO",
         achievements: [
           <>
@@ -124,6 +124,30 @@ const about = {
           <>
             Structured commission tracking models with KPI dashboards, reducing payout disputes and
             increasing dealer retention.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Verizon and AT&T Dealer Networks",
+        timeframe: "2010 – 2025",
+        role: "Sales Manager, Multi-Location Operations",
+        achievements: [
+          <>
+            Managed and scaled performance across 20 plus Verizon and AT&T authorized retail
+            locations.
+          </>,
+          <>
+            Led high-performing sales teams focused on wireless, fiber, and bundled service
+            conversions.
+          </>,
+          <>
+            Consistently ranked top in region and nationally for new line activations, accessory
+            attachment rates, and revenue per transaction.
+          </>,
+          <>
+            Implemented structured training systems, KPI tracking frameworks, and commission models
+            that improved profitability and reduced churn.
           </>,
         ],
         images: [],
