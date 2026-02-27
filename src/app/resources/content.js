@@ -94,6 +94,26 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
+        company: "WiFi Kings",
+        timeframe: "2021 – 2025",
+        role: "Founder & CEO",
+        achievements: [
+          <>
+            Built a full-stack dealer acquisition and management platform for fiber and wireless
+            internet sales, processing hundreds of orders monthly.
+          </>,
+          <>
+            Developed automated address-based availability funnels that qualify leads and route
+            orders to the correct carrier in real time.
+          </>,
+          <>
+            Structured commission tracking models with KPI dashboards, reducing payout disputes and
+            increasing dealer retention.
+          </>,
+        ],
+        images: [],
+      },
+      {
         company: "DaVinci Dynamics",
         timeframe: "2024 – Present",
         role: "Founder",
@@ -109,26 +129,6 @@ const about = {
           <>
             Engineered Shopify ecommerce systems structured for fast product discovery, bundle
             positioning, higher average order value, and repeat purchase optimization.
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "WiFi Kings",
-        timeframe: "2021 – Present",
-        role: "Founder & CEO",
-        achievements: [
-          <>
-            Built a full-stack dealer acquisition and management platform for fiber and wireless
-            internet sales, processing hundreds of orders monthly.
-          </>,
-          <>
-            Developed automated address-based availability funnels that qualify leads and route
-            orders to the correct carrier in real time.
-          </>,
-          <>
-            Structured commission tracking models with KPI dashboards, reducing payout disputes and
-            increasing dealer retention.
           </>,
         ],
         images: [],
