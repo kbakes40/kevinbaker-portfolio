@@ -115,7 +115,7 @@ const about = {
       },
       {
         company: "WiFi Kings",
-        timeframe: "2021 – 2025",
+        timeframe: "2021 – Present",
         role: "Founder & CEO",
         achievements: [
           <>
@@ -135,7 +135,7 @@ const about = {
       },
       {
         company: "Verizon and AT&T Dealer Networks",
-        timeframe: "2010 – 2025",
+        timeframe: "2012 – 2025",
         role: "Sales Manager, Multi-Location Operations",
         achievements: [
           <>
