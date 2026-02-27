@@ -6,8 +6,11 @@
 
 html {
     background-color: var(--page-background);
-    /* Safari iOS: prevent white overscroll bar */
+    /* Safari iOS: fill behind status bar */
     overscroll-behavior-y: none;
+    /* Extend background behind iOS status bar */
+    padding-top: env(safe-area-inset-top);
+    padding-top: constant(safe-area-inset-top);
 }
 
 body {
