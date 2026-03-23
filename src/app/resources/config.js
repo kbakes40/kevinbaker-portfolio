@@ -1,4 +1,4 @@
-const baseURL = "https://magic-portfolio-olive-rho.vercel.app";
+const baseURL = "https://www.kevinbaker.ai";
 
 const routes = {
   "/": true,
