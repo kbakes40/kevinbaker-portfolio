@@ -101,14 +101,14 @@
 .competencyGrid {
     display: flex;
     flex-direction: column;
-    gap: var(--static-space-16);
+    gap: var(--static-space-12);
 }
 
 .competencyCard {
     display: flex;
     flex-direction: column;
-    gap: var(--static-space-8);
-    padding: var(--static-space-20);
+    gap: var(--static-space-4);
+    padding: var(--static-space-16);
     border: 1px solid var(--neutral-border-medium);
     border-radius: var(--radius-m);
     background: var(--neutral-background-weak);
@@ -125,4 +125,8 @@
     display: flex;
     align-items: center;
     gap: 0;
+}
+
+.competencyDescription {
+    line-height: 1.55;
 }

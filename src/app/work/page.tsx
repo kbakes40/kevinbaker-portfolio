@@ -1,6 +1,6 @@
-import { Column } from "@/once-ui/components";
+import { Column, Heading, Text } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
-import { about, person, work } from "@/app/resources/content";
+import { about, home, person, work } from "@/app/resources/content";
 import { Meta, Schema } from "@/once-ui/modules";
 import { Projects } from "@/components/work/Projects";
 
@@ -16,7 +16,7 @@ export async function generateMetadata() {
 
 export default function Work() {
   return (
-    <Column maxWidth="m">
+    <Column maxWidth="m" gap="xl">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -30,6 +30,14 @@ export default function Work() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+      <Column fillWidth paddingY="24" gap="m">
+        <Heading variant="display-strong-l">
+          {home.featured?.title ?? "Revenue Systems Library"}
+        </Heading>
+        <Text variant="heading-default-xl" onBackground="neutral-weak">
+          {work.description}
+        </Text>
+      </Column>
       <Projects />
     </Column>
   );

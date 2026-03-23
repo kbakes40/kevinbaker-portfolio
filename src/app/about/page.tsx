@@ -347,7 +347,7 @@ export default function About() {
                 as="h2"
                 id={about.technical.title}
                 variant="display-strong-s"
-                marginBottom="40"
+                marginBottom="32"
               >
                 {about.technical.title}
               </Heading>
@@ -357,7 +357,11 @@ export default function About() {
                     <div className={styles.competencyCardHeader}>
                       <Text variant="heading-strong-l">{skill.title}</Text>
                     </div>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
+                    <Text
+                      className={styles.competencyDescription}
+                      variant="body-default-m"
+                      onBackground="neutral-weak"
+                    >
                       {skill.description}
                     </Text>
                   </div>
