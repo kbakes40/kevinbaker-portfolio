@@ -45,7 +45,7 @@ const home = {
   label: "Home",
   title: `Kevin Baker | DaVinci Dynamics | Revenue Systems Portfolio`,
   description: `Telecom dealer acquisition funnels, Shopify ecommerce conversion systems, and automation infrastructure built to scale.`,
-  headline: <>I build revenue systems, not websites.</>,
+  headline: <>Built to convert. Engineered to scale.</>,
   subline: (
     <>
       Telecom dealer acquisition funnels, Shopify ecommerce conversion engines, and AI powered
