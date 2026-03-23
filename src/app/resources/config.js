@@ -1,5 +1,7 @@
 const baseURL = "https://www.kevinbaker.ai";
 
+const googleAnalyticsMeasurementId = "G-MX2Z660VPB";
+
 const routes = {
   "/": true,
   "/about": true,
@@ -140,4 +142,14 @@ const mailchimp = {
   },
 };
 
-export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL, font };
+export {
+  routes,
+  protectedRoutes,
+  effects,
+  style,
+  display,
+  mailchimp,
+  baseURL,
+  font,
+  googleAnalyticsMeasurementId,
+};
